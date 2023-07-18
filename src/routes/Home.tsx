@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAllChessStreams } from "../api";
 import { StreamDataRoot } from "../api/types/getStreams";
 import AppLogo from "../components/AppLogo";
+import GrandmastersCarousel from "../components/GrandmastersCarousel";
 
 function Home() {
   const [streams, setStreams] = useState<StreamDataRoot>();
@@ -17,6 +18,7 @@ function Home() {
   return (
     <>
       <AppLogo></AppLogo>
+      <GrandmastersCarousel></GrandmastersCarousel>
       <div>
         {streams &&
           streams.data.map((stream) => {
